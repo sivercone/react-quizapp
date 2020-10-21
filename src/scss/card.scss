@@ -1,0 +1,67 @@
+.container-create {
+   width: 970px;
+   margin: 0 auto;
+   padding: 0 20px;
+
+   h2 {
+      text-align: center;
+   }
+}
+
+.cards-wrapper {
+   display: flex;
+   flex-direction: column-reverse;
+   width: 100%;
+   margin-bottom: 5%;
+}
+
+.card {
+   display: inline-flex;
+   width: 100%;
+   margin-top: 20px;
+   padding: 20px;
+   border-radius: 2px;
+   background-color: lighten($color: #101e1f, $amount: 5);
+   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+
+   span {
+      width: 100%;
+      text-transform: lowercase;
+      &:first-child {
+         width: 60%;
+      }
+   }
+
+   &__space {
+      margin: 0 50px;
+      width: 5px;
+      background-color: #42989e;
+   }
+
+   &__form {
+      width: 100%;
+      margin-top: 20px;
+      display: inline-flex;
+      align-items: center;
+
+      input {
+         width: 100%;
+         border-bottom: 1px solid #42989e;
+         margin-right: 20px;
+         transition: border 0.1s linear;
+         &:focus {
+            border-bottom: 5px solid #42989e;
+         }
+      }
+
+      button {
+         background-color: #42989e;
+         padding: 5px 10px;
+         transition: background-color 0.1s linear;
+         &:hover,
+         &:focus {
+            background-color: darken($color: #42989e, $amount: 10);
+         }
+      }
+   }
+}

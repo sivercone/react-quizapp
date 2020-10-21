@@ -1,0 +1,81 @@
+.container-learn {
+   width: 970px;
+   margin: 0 auto;
+   padding: 0 20px;
+   left: 50%;
+   top: 50%;
+   position: absolute;
+   transform: translate(-50%, -50%);
+}
+
+.learn {
+   width: 100%;
+   background-color: darken($color: #42989e, $amount: 20);
+   transition: background-color 0.2s linear, color 0.2s linear;
+
+   &__progressbar {
+      display: flex;
+      height: 3px;
+      background-color: inherit;
+
+      &__progress {
+         background-color: #a3ffb7;
+         width: 0;
+      }
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      padding: 35px;
+   }
+
+   span {
+      font-size: 30px;
+      font-weight: 400;
+   }
+
+   .space {
+      margin-top: 10px;
+      height: 3px;
+      background-color: #c32548;
+   }
+
+   .correctAnswerIs {
+      margin-top: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 18px;
+      color: darken($color: #c32548, $amount: 10);
+   }
+
+   .card__form {
+      margin-top: 200px;
+   }
+}
+
+.correct {
+   background-color: lighten($color: #42989e, $amount: 20) !important;
+   color: #000;
+
+   button {
+      background-color: #000000;
+   }
+   input {
+      border-bottom: 5px solid #000 !important;
+      color: #000;
+   }
+}
+
+.wrong {
+   background-color: lighten($color: #7a192e, $amount: 20) !important;
+   color: #000;
+
+   button {
+      background-color: #000000;
+   }
+   input {
+      border-bottom: 5px solid #000 !important;
+      color: #000;
+   }
+}
