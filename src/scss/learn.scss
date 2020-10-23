@@ -1,16 +1,17 @@
 .container-learn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 750px;
    width: 970px;
    margin: 0 auto;
    padding: 0 20px;
-   left: 50%;
-   top: 50%;
-   position: absolute;
-   transform: translate(-50%, -50%);
 }
 
 .learn {
    width: 100%;
-   background-color: darken($color: #42989e, $amount: 20);
+   height: 450px;
+   background-color: #192e30;
    transition: background-color 0.2s linear, color 0.2s linear;
 
    &__progressbar {
@@ -27,12 +28,31 @@
    &__content {
       display: flex;
       flex-direction: column;
-      padding: 35px;
+      height: 100%;
+      padding: 35px 50px;
+
+      div {
+         display: inline-flex;
+         flex-direction: column;
+         height: 100%;
+         margin-top: 50px;
+         span {
+            font-size: 30px;
+            font-weight: 400;
+         }
+      }
    }
 
-   span {
-      font-size: 30px;
-      font-weight: 400;
+   &__end {
+      h1 {
+         text-align: center;
+      }
+      button {
+         width: 100%;
+         padding: 15px;
+         font-weight: 600;
+         background-color: #42989e;
+      }
    }
 
    .space {
@@ -50,7 +70,7 @@
    }
 
    .card__form {
-      margin-top: 200px;
+      height: 100%;
    }
 }
 

@@ -9,12 +9,12 @@ export const CreateCard: React.FC = () => {
 
    const handleChangeTextQuestion = (event: React.FormEvent<HTMLInputElement>) => {
       if (event.currentTarget) {
-         setTextQuestion(event.currentTarget.value);
+         setTextQuestion(event.currentTarget.value.toLowerCase().replace(/\s+/g, ' '));
       }
    };
    const handleChangeTextAnswer = (event: React.FormEvent<HTMLInputElement>) => {
       if (event.currentTarget) {
-         setTextAnswer(event.currentTarget.value);
+         setTextAnswer(event.currentTarget.value.toLowerCase().replace(/\s+/g, ' '));
       }
    };
 
