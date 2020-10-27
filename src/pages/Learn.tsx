@@ -1,6 +1,16 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchCards } from '../redux/questions/actionCreators';
 
 export const Learn: React.FC = () => {
+   const dispatch = useDispatch();
+   const cardsItems = useSelector((state: any) => state.questions.items);
+   const moduleId = useSelector((state: any) => state.filters.module.id);
+
+   React.useEffect(() => {
+      dispatch(fetchCards(moduleId));
+   }, [dispatch, moduleId]);
+
    const [term, setTerm] = React.useState<any>([]); // all terms keep here
    const [incorrect, setIncorrect] = React.useState<any>([]); // wrong answers keep here
    const [text, setText] = React.useState<string>('');
@@ -10,12 +20,8 @@ export const Learn: React.FC = () => {
    const [nextStage, setNextStage] = React.useState<boolean>(false);
 
    React.useEffect(() => {
-      fetch('/terms')
-         .then((response) => response.json())
-         .then((data) => {
-            setTerm(data.sort(() => Math.random() - 0.5));
-         });
-   }, []);
+      setTerm(cardsItems);
+   }, [cardsItems]);
 
    const endScore: number = 100 - Math.round((incorrect.length / term.length) * 100);
    const scorePercent: number = Math.round((score / term.length) * 100);

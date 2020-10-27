@@ -2,8 +2,8 @@ import axios from 'axios';
 import { Terms } from './redux/questions/ts/state';
 
 export const CardsApi = {
-   fetchCards(): Promise<Terms> {
-      return axios.get('/terms').then(({ data }) => data);
+   fetchCards(payload: any): Promise<Terms> {
+      return axios.get(`/terms?module.${payload !== 0 ? `id=${payload}` : ''}`).then(({ data }) => data);
    },
 
    fetchAddCard(payload: Terms): Promise<Terms> {

@@ -10,6 +10,7 @@ export enum CardsType {
 
 export interface fetchCardsInterface extends Action<CardsType> {
    type: CardsType.FETCH_CARDS;
+   payload: any;
 }
 
 export interface setCardsInterface extends Action<CardsType> {
@@ -21,6 +22,8 @@ export interface fetchAddCardInterface extends Action<CardsType> {
    type: CardsType.FETCH_ADD_CARD;
    payload1: string;
    payload2: string;
+   moduleId: string | number;
+   moduleName: string;
 }
 
 export interface addCardInterface extends Action<CardsType> {

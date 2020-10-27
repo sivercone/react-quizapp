@@ -1,0 +1,19 @@
+.home-container {
+   width: 950px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   a {
+      width: inherit;
+   }
+
+   .card {
+      border: 2px solid transparent;
+      &:hover {
+         border-bottom: 2px solid rgb(147, 248, 255);
+      }
+   }
+}

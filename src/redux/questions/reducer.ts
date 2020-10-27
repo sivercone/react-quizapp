@@ -10,11 +10,11 @@ const initialState = {
 
 export const questionsReducer = (state = initialState, action: CardsActions) => {
    switch (action.type) {
-      case CardsType.FETCH_CARDS:
-         return {
-            items: [],
-            loadingState: LoadingState.LOADING,
-         };
+      // case CardsType.FETCH_CARDS:
+      //    return {
+      //       items: [],
+      //       loadingState: LoadingState.LOADING,
+      //    };
 
       case CardsType.SET_CARDS:
          return {

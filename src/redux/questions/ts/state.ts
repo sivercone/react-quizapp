@@ -9,6 +9,10 @@ export interface Terms {
    id: string;
    question: string;
    answer: string;
+   module: {
+      id: number | string;
+      name: string;
+   };
 }
 
 export enum AddCardState {

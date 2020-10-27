@@ -1,24 +1,99 @@
 {
-  "terms": [
-    {
-      "id": "ssfs9e8f6zs",
-      "question": "thief",
-      "answer": "вор"
-    },
-    {
-      "id": "49wbh1qen8d",
-      "question": "threat",
-      "answer": "угроза"
-    },
-    {
-      "id": "k4skxy4dh1",
-      "question": "take off",
-      "answer": "снимать"
-    },
-    {
-      "id": "ay695rd18vc",
-      "question": "habit",
-      "answer": "привычка"
-    }
-  ]
+   "terms": [
+      {
+         "id": "ssfs9e8f6zs",
+         "question": "thief",
+         "answer": "вор",
+         "module": {
+            "id": 111,
+            "name": "A"
+         }
+      },
+      {
+         "id": "49wbh1qen8d",
+         "question": "threat",
+         "answer": "угроза",
+         "module": {
+            "id": 111,
+            "name": "A"
+         }
+      },
+      {
+         "id": "k4skxy4dh1",
+         "question": "take off",
+         "answer": "снимать",
+         "module": {
+            "id": 111,
+            "name": "A"
+         }
+      },
+      {
+         "id": "ay695rd18vc",
+         "question": "habit",
+         "answer": "привычка",
+         "module": {
+            "id": 111,
+            "name": "A"
+         }
+      },
+      {
+         "id": "bkp4a2h0u7o",
+         "question": "juice",
+         "answer": "сок",
+         "module": {
+            "id": 222,
+            "name": "F"
+         }
+      },
+      {
+         "id": "3fkh56kdpuz",
+         "question": "apple",
+         "answer": "яблоко",
+         "module": {
+            "id": 222,
+            "name": "F"
+         }
+      },
+      {
+         "id": "kfd9f54hwd",
+         "question": "bear",
+         "answer": "медведь",
+         "module": {
+            "id": 333,
+            "name": "G"
+         }
+      },
+      {
+         "id": "fdcchms0tnw",
+         "question": "font",
+         "answer": "шрифт",
+         "module": {
+            "id": 222,
+            "name": "F"
+         }
+      },
+      {
+         "id": "rs3q5kyse1c",
+         "question": "keep",
+         "answer": "хранить",
+         "module": {
+            "id": 333,
+            "name": "G"
+         }
+      }
+   ],
+   "modules": [
+      {
+         "id": 111,
+         "name": "A"
+      },
+      {
+         "id": 222,
+         "name": "F"
+      },
+      {
+         "id": 333,
+         "name": "G"
+      }
+   ]
 }

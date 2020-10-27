@@ -40,7 +40,6 @@
 
    &__form {
       width: 100%;
-      margin-top: 20px;
       display: inline-flex;
       align-items: center;
 
@@ -61,6 +60,39 @@
          &:hover,
          &:focus {
             background-color: darken($color: #42989e, $amount: 10);
+         }
+      }
+   }
+}
+
+.popup {
+   display: inline-flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   background-color: #192e30;
+   cursor: pointer;
+
+   h4 {
+      margin: 0;
+   }
+}
+
+.display-popup {
+   position: relative;
+   width: 100%;
+   cursor: default;
+
+   ul {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: #1d5053;
+      li {
+         padding: 10px 20px;
+         &:hover {
+            background-color: #1e747c;
          }
       }
    }
