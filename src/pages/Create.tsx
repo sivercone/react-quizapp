@@ -4,9 +4,11 @@ import { CreatedCards } from '../components/CreatedCards';
 
 export const Create: React.FC = () => {
    return (
-      <div className="container-create">
-         <CreateCard />
-         <CreatedCards />
-      </div>
+      <section className="cards-squares">
+         <div className="container">
+            <CreateCard />
+            <CreatedCards />
+         </div>
+      </section>
    );
 };

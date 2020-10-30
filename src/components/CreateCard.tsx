@@ -1,7 +1,10 @@
 import React from 'react';
+import axios from 'axios';
 import { useDispatch } from 'react-redux';
+
 import { fetchAddCard } from '../redux/questions/actionCreators';
 import { setModule } from '../redux/filter/actionCreators';
+import { ModulesInterface } from '../redux/filter/ts/state';
 
 export const CreateCard: React.FC = () => {
    const dispatch = useDispatch();
@@ -9,8 +12,8 @@ export const CreateCard: React.FC = () => {
 
    const [textQuestion, setTextQuestion] = React.useState<string>('');
    const [textAnswer, setTextAnswer] = React.useState<string>('');
-   const [modules, setModules] = React.useState<any>([]);
-   const [currentModule, setCurrentModule] = React.useState<any>({ id: 0, name: '' });
+   const [modules, setModules] = React.useState<[ModulesInterface]>();
+   const [currentModule, setCurrentModule] = React.useState<ModulesInterface>({ id: '0', name: '' });
    const [visiblePopup, setVisiblePopup] = React.useState<boolean>(false);
 
    const nonPopupClick = (event: any) => {
@@ -21,11 +24,7 @@ export const CreateCard: React.FC = () => {
    };
 
    React.useEffect(() => {
-      fetch('/modules')
-         .then((response) => response.json())
-         .then((data) => {
-            setModules(data);
-         });
+      axios.get('/modules').then(({ data }) => setModules(data));
 
       document.body.addEventListener('click', nonPopupClick);
    }, []);
@@ -53,7 +52,7 @@ export const CreateCard: React.FC = () => {
    const createTerm = (event: React.FormEvent) => {
       event.preventDefault();
 
-      if (currentModule.id === 0) {
+      if (currentModule.id === '0') {
          return;
       }
 
@@ -69,18 +68,16 @@ export const CreateCard: React.FC = () => {
 
    /*
       TODO: 
-      1. Сделать проверку выбран ли в фильтре в какйо модуль нужно добавлять, если нет сказать что нужно выбрать модуль
-      2. Сделать создание модулей.
-      3. Сделать disabled button
+     1. Сделать создание модулей.
    */
 
    return (
-      <div className="learn-container">
-         <div ref={linkToPopup} style={{ width: '100%' }}>
+      <div className="create-term">
+         <div ref={linkToPopup}>
             <div onClick={toggleVisiblePopup} className="card popup">
-               <h4>{currentModule.id === 0 ? 'Choose Module' : currentModule.name}</h4>
+               <h4>{currentModule.id === '0' ? 'Select Module' : currentModule.name}</h4>
                <svg
-                  className="rotated"
+                  className={visiblePopup ? 'rotate' : undefined}
                   xmlns="http://www.w3.org/2000/svg"
                   height="24"
                   viewBox="0 0 24 24"
@@ -91,10 +88,10 @@ export const CreateCard: React.FC = () => {
                </svg>
             </div>
             {visiblePopup && (
-               <div className="display-popup">
+               <div className="popup__visible">
                   <ul>
                      {modules &&
-                        modules.map((content: any) => (
+                        modules.map((content: ModulesInterface) => (
                            <li onClick={() => setCurrentModule(content)} key={content.id}>
                               {content.name}
                            </li>
@@ -103,10 +100,12 @@ export const CreateCard: React.FC = () => {
                </div>
             )}
          </div>
-         <form onSubmit={createTerm} className="card card__form">
+         <form onSubmit={createTerm} className="send-form card">
             <input onChange={handleChangeTextQuestion} value={textQuestion} placeholder="Question" />
             <input onChange={handleChangeTextAnswer} value={textAnswer} placeholder="Answer" />
-            <button onClick={createTerm}>Create</button>
+            <button disabled={currentModule.id === '0' || !textQuestion.trim() || !textAnswer.trim()} onClick={createTerm}>
+               Create
+            </button>
          </form>
       </div>
    );

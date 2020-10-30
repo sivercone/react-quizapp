@@ -1,10 +1,90 @@
-.container-create {
-   width: 970px;
-   margin: 0 auto;
-   padding: 0 20px;
+.cards-squares {
+   background: url(./svg/squares.svg);
+}
 
-   h2 {
-      text-align: center;
+.terms-length {
+   text-align: center;
+   color: #ffffff;
+}
+
+.card {
+   display: inline-flex;
+   width: 100%;
+
+   border-radius: 2px;
+   padding: 20px;
+   background-color: #1ed760;
+   color: #000;
+}
+
+.create-term {
+   .popup {
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+         transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+         &.rotate {
+            transform: rotate(180deg);
+         }
+      }
+
+      h4 {
+         margin: 0;
+      }
+
+      &__visible {
+         position: relative;
+         width: 100%;
+         cursor: pointer;
+
+         ul {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: #181818;
+            color: #fff;
+            font-weight: 700;
+
+            li {
+               padding: 10px 20px;
+               &:hover {
+                  background-color: #131313;
+                  color: #8e65ff;
+               }
+            }
+         }
+      }
+   }
+
+   .send-form {
+      margin-top: 20px;
+      input {
+         border-bottom: 2px solid #000;
+         margin-right: 20px;
+         &:focus {
+            border-bottom: 3px solid #000;
+         }
+      }
+
+      button {
+         background-color: #000000;
+         color: #ffffff;
+         &:hover,
+         &:focus {
+            color: #8e65ff;
+         }
+
+         &:disabled,
+         &[disabled] {
+            background-color: #21bd58;
+            color: #2e2e2e;
+            cursor: default;
+         }
+      }
    }
 }
 
@@ -13,87 +93,19 @@
    flex-direction: column-reverse;
    width: 100%;
    margin-bottom: 5%;
-}
 
-.card {
-   display: inline-flex;
-   width: 100%;
-   margin-top: 20px;
-   padding: 20px;
-   border-radius: 2px;
-   background-color: lighten($color: #101e1f, $amount: 5);
-   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+   .card {
+      margin-top: 20px;
 
-   span {
-      width: 100%;
-      text-transform: lowercase;
-      &:first-child {
-         width: 60%;
-      }
-   }
-
-   &__space {
-      margin: 0 50px;
-      width: 5px;
-      background-color: #42989e;
-   }
-
-   &__form {
-      width: 100%;
-      display: inline-flex;
-      align-items: center;
-
-      input {
+      span {
          width: 100%;
-         border-bottom: 1px solid #42989e;
-         margin-right: 20px;
-         transition: border 0.1s linear;
-         &:focus {
-            border-bottom: 5px solid #42989e;
+         &:first-child {
+            width: 60%;
          }
       }
 
-      button {
-         background-color: #42989e;
-         padding: 5px 10px;
-         transition: background-color 0.1s linear;
-         &:hover,
-         &:focus {
-            background-color: darken($color: #42989e, $amount: 10);
-         }
-      }
-   }
-}
-
-.popup {
-   display: inline-flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
-   background-color: #192e30;
-   cursor: pointer;
-
-   h4 {
-      margin: 0;
-   }
-}
-
-.display-popup {
-   position: relative;
-   width: 100%;
-   cursor: default;
-
-   ul {
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      background-color: #1d5053;
-      li {
-         padding: 10px 20px;
-         &:hover {
-            background-color: #1e747c;
-         }
+      .line-height {
+         margin: 0 50px;
       }
    }
 }

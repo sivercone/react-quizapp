@@ -1,19 +1,27 @@
-.home-container {
-   width: 950px;
-   margin: 0 auto;
-   display: flex;
+.modals-waves {
+   background: url(./svg/waves.svg);
+   background-position: center;
+   background-size: auto;
+}
+
+.modals {
    flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   margin-bottom: 50px !important;
 
    a {
       width: inherit;
-   }
+      margin-top: 20px;
+      &:first-child {
+         margin-top: 0;
+      }
 
-   .card {
-      border: 2px solid transparent;
-      &:hover {
-         border-bottom: 2px solid rgb(147, 248, 255);
+      .card {
+         background-color: #181818;
+         color: #1ed760;
+         &:hover {
+            background-color: #1ed760;
+            color: #000;
+         }
       }
    }
 }

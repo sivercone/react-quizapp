@@ -3,7 +3,7 @@ import { FiltersActions } from './actionCreators';
 
 const initialState = {
    module: {
-      id: 0,
+      id: '0',
       name: '',
    },
 };

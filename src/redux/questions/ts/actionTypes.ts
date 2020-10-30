@@ -1,5 +1,5 @@
 import { Action } from 'redux';
-import { Terms } from './state';
+import { TermsInterface } from './state';
 
 export enum CardsType {
    FETCH_CARDS = 'FETCH_CARDS',
@@ -10,12 +10,12 @@ export enum CardsType {
 
 export interface fetchCardsInterface extends Action<CardsType> {
    type: CardsType.FETCH_CARDS;
-   payload: any;
+   payload: string;
 }
 
 export interface setCardsInterface extends Action<CardsType> {
    type: CardsType.SET_CARDS;
-   payload: Terms;
+   payload: TermsInterface;
 }
 
 export interface fetchAddCardInterface extends Action<CardsType> {
@@ -28,5 +28,5 @@ export interface fetchAddCardInterface extends Action<CardsType> {
 
 export interface addCardInterface extends Action<CardsType> {
    type: CardsType.ADD_CARD;
-   payload: Terms;
+   payload: TermsInterface;
 }

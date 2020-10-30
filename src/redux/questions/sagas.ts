@@ -1,8 +1,8 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { CardsApi } from '../../cardsApi';
 import { setCards, addCard } from './actionCreators';
-import { Terms } from './ts/state';
 import { CardsType, fetchAddCardInterface, fetchCardsInterface } from './ts/actionTypes';
+import { TermsInterface } from './ts/state';
 
 export function* fetchCardsRequest({ payload }: fetchCardsInterface) {
    const items = yield call(CardsApi.fetchCards, payload);
@@ -10,7 +10,7 @@ export function* fetchCardsRequest({ payload }: fetchCardsInterface) {
 }
 
 export function* fetchAddCardRequest({ payload1, payload2, moduleId, moduleName }: fetchAddCardInterface) {
-   const data: Terms = {
+   const data: TermsInterface = {
       id: Math.random().toString(36).substr(2),
       question: payload1,
       answer: payload2,

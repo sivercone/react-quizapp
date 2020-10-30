@@ -1,13 +1,13 @@
-import { Terms } from './ts/state';
 // prettier-ignore
 import {CardsType,fetchCardsInterface,setCardsInterface,fetchAddCardInterface,addCardInterface} from './ts/actionTypes';
+import { TermsInterface } from './ts/state';
 
-export const fetchCards = (payload: any): fetchCardsInterface => ({
+export const fetchCards = (payload: string): fetchCardsInterface => ({
    type: CardsType.FETCH_CARDS,
    payload,
 });
 
-export const setCards = (payload: Terms): setCardsInterface => ({
+export const setCards = (payload: TermsInterface): setCardsInterface => ({
    type: CardsType.SET_CARDS,
    payload,
 });
@@ -21,7 +21,7 @@ export const fetchAddCard = (payload1: string, payload2: string, moduleId: strin
    moduleName,
 });
 
-export const addCard = (payload: Terms): addCardInterface => ({
+export const addCard = (payload: TermsInterface): addCardInterface => ({
    type: CardsType.ADD_CARD,
    payload,
 });

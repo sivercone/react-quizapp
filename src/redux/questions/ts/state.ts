@@ -5,7 +5,7 @@ export enum LoadingState {
    LOADED = 'LOADED',
 }
 
-export interface Terms {
+export interface TermsInterface {
    id: string;
    question: string;
    answer: string;
@@ -13,6 +13,12 @@ export interface Terms {
       id: number | string;
       name: string;
    };
+}
+
+export interface TermsState {
+   items: TermsInterface[];
+   loadingState: LoadingState;
+   addCardState: AddCardState;
 }
 
 export enum AddCardState {

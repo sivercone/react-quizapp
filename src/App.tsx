@@ -9,7 +9,6 @@ import { Home } from './pages/Home';
    TODO:
    1. Сделать удаление карточек
    2. Убрать Header и сделать бургер (плюс добавить эффект наводки для курсора, есть в ютубе туториал
-   3. Сделать модули
 */
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
          <Header />
          <Switch>
             <Route path="/" component={Home} exact />
-            <Route path="/learn" component={Learn} exact />
+            <Route path="/learn/:id" component={Learn} exact />
             <Route path="/create" component={Create} exact />
          </Switch>
       </>

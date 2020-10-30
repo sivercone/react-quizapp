@@ -1,12 +1,12 @@
 import axios from 'axios';
-import { Terms } from './redux/questions/ts/state';
+import { TermsInterface } from './redux/questions/ts/state';
 
 export const CardsApi = {
-   fetchCards(payload: any): Promise<Terms> {
-      return axios.get(`/terms?module.${payload !== 0 ? `id=${payload}` : ''}`).then(({ data }) => data);
+   fetchCards(payload: any): Promise<TermsInterface> {
+      return axios.get(`/terms?module.${payload !== '0' ? `id=${payload}` : ''}`).then(({ data }) => data);
    },
 
-   fetchAddCard(payload: Terms): Promise<Terms> {
+   fetchAddCard(payload: TermsInterface): Promise<TermsInterface> {
       return axios.post('/terms', payload).then(({ data }) => data);
    },
 };

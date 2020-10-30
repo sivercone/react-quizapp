@@ -1,17 +1,15 @@
+.learn-learning {
+   background: url(./svg/learning.svg);
+}
+
 .container-learn {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 750px;
-   width: 970px;
-   margin: 0 auto;
-   padding: 0 20px;
+   height: 800px;
 }
 
 .learn {
    width: 100%;
-   height: 450px;
-   background-color: #192e30;
+   height: 460px;
+   background-color: #000;
    transition: background-color 0.2s linear, color 0.2s linear;
 
    &__progressbar {
@@ -19,8 +17,8 @@
       height: 3px;
       background-color: inherit;
 
-      &__progress {
-         background-color: #a3ffb7;
+      &__line {
+         background-color: #f54e00;
          width: 0;
       }
    }
@@ -37,28 +35,24 @@
          height: 100%;
          margin-top: 50px;
          span {
-            font-size: 30px;
+            font-size: 50px;
             font-weight: 400;
          }
       }
    }
 
    &__end {
-      h1 {
-         text-align: center;
-      }
+      text-align: center;
+
       button {
-         width: 100%;
-         padding: 15px;
-         font-weight: 600;
-         background-color: #42989e;
+         font-size: 80px;
+         font-weight: 800;
+         color: #f54e00;
       }
    }
 
-   .space {
+   .line-width {
       margin-top: 10px;
-      height: 3px;
-      background-color: #c32548;
    }
 
    .correctAnswerIs {
@@ -66,20 +60,39 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 18px;
-      color: darken($color: #c32548, $amount: 10);
+      color: #b30027;
    }
 
-   .card__form {
+   .send-form {
+      display: inline-flex;
       height: 100%;
+
+      input {
+         border-bottom: 1px solid #ffffff;
+         margin-right: 20px;
+         &:focus {
+            border-bottom: 3px solid #ffffff;
+         }
+      }
+
+      button {
+         background-color: #ffffff;
+         color: #000000;
+         &:hover,
+         &:focus {
+            color: #4100f5;
+         }
+      }
    }
 }
 
 .correct {
-   background-color: lighten($color: #42989e, $amount: 20) !important;
+   background-color: #12eb5e !important;
    color: #000;
 
    button {
       background-color: #000000;
+      color: #fff;
    }
    input {
       border-bottom: 5px solid #000 !important;
@@ -88,11 +101,12 @@
 }
 
 .wrong {
-   background-color: lighten($color: #7a192e, $amount: 20) !important;
+   background-color: #ff0037 !important;
    color: #000;
 
    button {
       background-color: #000000;
+      color: #fff;
    }
    input {
       border-bottom: 5px solid #000 !important;
