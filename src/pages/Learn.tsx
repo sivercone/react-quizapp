@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchCards } from '../redux/questions/actionCreators';
 import { useParams } from 'react-router-dom';
 import { RootState } from '../redux/store';
-import { TermsInterface } from '../redux/questions/ts/state';
+import { fetchCards } from '../redux/cards/actionCreators';
+import { TermsInterface } from '../redux/cards/ts/state';
 
 export const Learn: React.FC = () => {
    const params: { id: string } = useParams();

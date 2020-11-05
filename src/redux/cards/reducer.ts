@@ -36,6 +36,12 @@ export const questionsReducer = (state = initialState, action: CardsActions) => 
             addCardState: AddCardState.STATIC,
          };
 
+      case CardsType.REMOVE_CARD_SUCCESS:
+         return {
+            ...state,
+            items: state.items.filter((item) => item !== action.payload),
+         };
+
       default:
          return state;
    }

@@ -1,111 +1,1047 @@
 {
   "terms": [
     {
-      "id": "ssfs9e8f6zs",
-      "question": "thief",
-      "answer": "вор",
+      "id": "A123",
+      "question": "able",
+      "answer": "умеет, способный",
       "module": {
         "id": "111",
         "name": "A"
       }
     },
     {
-      "id": "49wbh1qen8d",
-      "question": "threat",
-      "answer": "угроза",
+      "id": "A124",
+      "question": "abroad",
+      "answer": "за границей, за границу",
       "module": {
         "id": "111",
         "name": "A"
       }
     },
     {
-      "id": "k4skxy4dh1",
-      "question": "take off",
-      "answer": "снимать",
+      "id": "A125",
+      "question": "accept",
+      "answer": "принимать, соглашаться",
       "module": {
         "id": "111",
         "name": "A"
       }
     },
     {
-      "id": "ay695rd18vc",
-      "question": "habit",
-      "answer": "привычка",
+      "id": "A126",
+      "question": "accident",
+      "answer": "несчастный случай, авария",
       "module": {
         "id": "111",
         "name": "A"
       }
     },
     {
-      "id": "bkp4a2h0u7o",
-      "question": "juice",
-      "answer": "сок",
+      "id": "A127",
+      "question": "account",
+      "answer": "счет",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A128",
+      "question": "ache",
+      "answer": "боль, болеть",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A129",
+      "question": "across",
+      "answer": "поперек, сквозь, через",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A130",
+      "question": "addict",
+      "answer": "наркоман, зависимый",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A131",
+      "question": "adjustment",
+      "answer": "регулирование",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A132",
+      "question": "advantage",
+      "answer": "преимущество, выгода",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A133",
+      "question": "adventure",
+      "answer": "приключение",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A134",
+      "question": "advertisement",
+      "answer": "объявление, реклама",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A135",
+      "question": "advice",
+      "answer": "совет, рекомендация",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A136",
+      "question": "afford",
+      "answer": "позволить себе (финансово)",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A137",
+      "question": "after",
+      "answer": "после",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A138",
+      "question": "afternoon",
+      "answer": "днём",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A139",
+      "question": "against",
+      "answer": "против, вопреки",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A140",
+      "question": "agreement",
+      "answer": "соглашение, договор",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A141",
+      "question": "alike",
+      "answer": "одинаковый, похожий",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A142",
+      "question": "alive",
+      "answer": "живой, в живых",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A143",
+      "question": "allow",
+      "answer": "позволять, разрешать",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A144",
+      "question": "almost",
+      "answer": "почти",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A145",
+      "question": "along",
+      "answer": "вдоль (дороги), по",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A146",
+      "question": "also",
+      "answer": "также, тоже",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A147",
+      "question": "although",
+      "answer": "хотя, несмотря на то, что",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A148",
+      "question": "always",
+      "answer": "всегда",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A149",
+      "question": "ambulance",
+      "answer": "скорая помощь",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A150",
+      "question": "among",
+      "answer": "среди (людей), между",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A151",
+      "question": "amount",
+      "answer": "количество, сумма",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A152",
+      "question": "angle",
+      "answer": "угол",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A153",
+      "question": "anniversary",
+      "answer": "годовщина, юбилей",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A154",
+      "question": "announce",
+      "answer": "объявлять, объявление",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A155",
+      "question": "annoying",
+      "answer": "раздражающий",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A156",
+      "question": "answer",
+      "answer": "ответ, отвечать",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A157",
+      "question": "any",
+      "answer": "любой",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A158",
+      "question": "apart",
+      "answer": "кроме (плохой погоды, у нас был хороший день)",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A159",
+      "question": "apologize",
+      "answer": "извиняться, просить прощения",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A160",
+      "question": "apparently",
+      "answer": "Очевидно, вероятно",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A161",
+      "question": "apartment",
+      "answer": "квартира",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A162",
+      "question": "appear",
+      "answer": "появляться/появиться",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A163",
+      "question": "apply",
+      "answer": "применять",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A164",
+      "question": "appointment",
+      "answer": "встреча",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A165",
+      "question": "area",
+      "answer": "местность, область",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A166",
+      "question": "arm",
+      "answer": "рука",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A167",
+      "question": "arrange",
+      "answer": "организовывать",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A168",
+      "question": "arrive",
+      "answer": "прибывать",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A169",
+      "question": "attempt",
+      "answer": "попытка",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A170",
+      "question": "attention",
+      "answer": "внимание",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A171",
+      "question": "attractive",
+      "answer": "привлекательный",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A172",
+      "question": "aunt",
+      "answer": "тётя",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A173",
+      "question": "authority",
+      "answer": "власть, авторитет",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A174",
+      "question": "average",
+      "answer": "средний, в среднем",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "A175",
+      "question": "avoid",
+      "answer": "избегать",
+      "module": {
+        "id": "111",
+        "name": "A"
+      }
+    },
+    {
+      "id": "B001",
+      "question": "bag",
+      "answer": "сумка",
       "module": {
         "id": "222",
-        "name": "F"
+        "name": "B"
       }
     },
     {
-      "id": "3fkh56kdpuz",
-      "question": "apple",
-      "answer": "яблоко",
+      "id": "B002",
+      "question": "ball",
+      "answer": "мяч",
       "module": {
         "id": "222",
-        "name": "F"
+        "name": "B"
       }
     },
     {
-      "id": "kfd9f54hwd",
-      "question": "bear",
-      "answer": "медведь",
+      "id": "B003",
+      "question": "bath",
+      "answer": "ванна",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B004",
+      "question": "beautiful",
+      "answer": "красивый",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B005",
+      "question": "bed",
+      "answer": "кровать",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B006",
+      "question": "behaviour",
+      "answer": "поведение, поступок",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B007",
+      "question": "between",
+      "answer": "между, среди",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B008",
+      "question": "board",
+      "answer": "доска",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B009",
+      "question": "boat",
+      "answer": "лодка",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B010",
+      "question": "book",
+      "answer": "книга, бронировать",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B011",
+      "question": "bridge",
+      "answer": "мост",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B012",
+      "question": "button",
+      "answer": "кнопка",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B013",
+      "question": "behind",
+      "answer": "сзади, позади",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B014",
+      "question": "bottom",
+      "answer": "низ, дно",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B015",
+      "question": "break",
+      "answer": "ломать, перерыв",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B016",
+      "question": "beef",
+      "answer": "мясо (говядина)",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B017",
+      "question": "bell",
+      "answer": "колокол, звонок",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B018",
+      "question": "below",
+      "answer": "ниже",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B019",
+      "question": "blind",
+      "answer": "слепой",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B020",
+      "question": "born",
+      "answer": "родился",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B021",
+      "question": "borrow",
+      "answer": "брать взаймы, занимать",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B022",
+      "question": "both",
+      "answer": "оба",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B023",
+      "question": "bother",
+      "answer": "беспокоить",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B024",
+      "question": "breakfast",
+      "answer": "завтрак",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B025",
+      "question": "bright",
+      "answer": "яркий, светлый",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "B026",
+      "question": "bring",
+      "answer": "приносить",
+      "module": {
+        "id": "222",
+        "name": "B"
+      }
+    },
+    {
+      "id": "D001",
+      "question": "daughter",
+      "answer": "дочь",
       "module": {
         "id": "333",
-        "name": "G"
+        "name": "D"
       }
     },
     {
-      "id": "fdcchms0tnw",
-      "question": "font",
-      "answer": "шрифт",
-      "module": {
-        "id": "222",
-        "name": "F"
-      }
-    },
-    {
-      "id": "rs3q5kyse1c",
-      "question": "keep",
-      "answer": "хранить",
+      "id": "D002",
+      "question": "dear",
+      "answer": "дорогой, милый",
       "module": {
         "id": "333",
-        "name": "G"
+        "name": "D"
       }
     },
     {
-      "id": "dv5gnbavo76",
-      "question": "best",
-      "answer": "лучший",
+      "id": "D003",
+      "question": "debt",
+      "answer": "долг",
       "module": {
-        "id": "33234",
-        "name": "1G1"
+        "id": "333",
+        "name": "D"
       }
     },
     {
-      "id": "6pvilh7rc59",
-      "question": "cloud",
-      "answer": "облако",
+      "id": "D004",
+      "question": "deep",
+      "answer": "глубокий, глубоко",
       "module": {
-        "id": "33234",
-        "name": "1G1"
+        "id": "333",
+        "name": "D"
       }
     },
     {
-      "id": "8s6ko3f7xsc",
-      "question": "never",
-      "answer": "никогда",
+      "id": "D006",
+      "question": "different",
+      "answer": "разный, другой",
       "module": {
-        "id": "33234",
-        "name": "1G1"
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D007",
+      "question": "direction",
+      "answer": "направление, руководство",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D008",
+      "question": "dirty",
+      "answer": "грязный",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D009",
+      "question": "discovery",
+      "answer": "открытие, обнаружение, находка",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D010",
+      "question": "disgust",
+      "answer": "отвращение, омерзение",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D011",
+      "question": "distance",
+      "answer": "расстояние",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D012",
+      "question": "down",
+      "answer": "вниз",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D013",
+      "question": "doubt",
+      "answer": "сомнение, сомневаться",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D014",
+      "question": "dress",
+      "answer": "платье, одеваться",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D015",
+      "question": "dust",
+      "answer": "пыль",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D016",
+      "question": "degree",
+      "answer": "степень, градус",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D017",
+      "question": "decrease",
+      "answer": "уменьшение",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D018",
+      "question": "delivery",
+      "answer": "доставка",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D019",
+      "question": "desert",
+      "answer": "пустыня",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D020",
+      "question": "doll",
+      "answer": "кукла",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D021",
+      "question": "dream",
+      "answer": "сон, мечта",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D022",
+      "question": "difficult",
+      "answer": "трудный, сложный",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D023",
+      "question": "dinner",
+      "answer": "ужин",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D024",
+      "question": "deserve",
+      "answer": "заслуживать",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D025",
+      "question": "decide",
+      "answer": "решать",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D026",
+      "question": "definitely",
+      "answer": "определенно",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D027",
+      "question": "delay",
+      "answer": "задержка",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D028",
+      "question": "delicious",
+      "answer": "вкусный, восхитительный",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D029",
+      "question": "departure",
+      "answer": "отправление, отъезд",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D030",
+      "question": "depend",
+      "answer": "зависеть, полагаться",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D031",
+      "question": "disappoint",
+      "answer": "разочаровывать, разочарование",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D032",
+      "question": "dish",
+      "answer": "блюдо, тарелка",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D033",
+      "question": "divorced",
+      "answer": "разведенный",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D034",
+      "question": "drop",
+      "answer": "ронять, бросать, падать",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D035",
+      "question": "dry",
+      "answer": "сухой, сушить",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D036",
+      "question": "dull",
+      "answer": "скучный",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D037",
+      "question": "during",
+      "answer": "в течение, во время",
+      "module": {
+        "id": "333",
+        "name": "D"
+      }
+    },
+    {
+      "id": "D038",
+      "question": "depth",
+      "answer": "глубина",
+      "module": {
+        "id": "333",
+        "name": "D"
       }
     }
   ],
@@ -116,19 +1052,23 @@
     },
     {
       "id": "222",
-      "name": "F"
+      "name": "B"
     },
     {
       "id": "333",
-      "name": "G"
+      "name": "D"
     },
     {
-      "id": "3334",
-      "name": "G1"
+      "id": "444",
+      "name": "E"
     },
     {
-      "id": "33234",
-      "name": "1G1"
+      "id": "555",
+      "name": "F"
+    },
+    {
+      "id": "vu4odnetey",
+      "name": "EEEEEEEEEEEEEEEEEEEEEEEEEE"
     }
   ]
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Create } from './pages/Create';
 import { Learn } from './pages/Learn';
 import { Header } from './components/Header';
 import { Home } from './pages/Home';
+import { Create } from './components/Create';
 
 /*
    TODO:

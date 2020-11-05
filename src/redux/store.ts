@@ -1,10 +1,9 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import { rootReducer } from './rootReducer';
 import createSagaMiddleware from 'redux-saga';
-// import rootSaga from './saga';
-import { cardsSaga } from './questions/sagas';
-import { TermsState } from './questions/ts/state';
-import { ModulesState } from './filter/ts/state';
+import { rootSaga } from './saga';
+import { TermsState } from './cards/ts/state';
+import { ModulesState } from './modules/ts/state';
 
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
@@ -17,4 +16,4 @@ export interface RootState {
 
 export const store = createStore(rootReducer, composeEnhancers(applyMiddleware(sagaMiddleware)));
 
-sagaMiddleware.run(cardsSaga);
+sagaMiddleware.run(rootSaga);

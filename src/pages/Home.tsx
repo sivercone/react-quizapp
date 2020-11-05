@@ -3,8 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import { setModule } from '../redux/filter/actionCreators';
-import { ModulesInterface } from '../redux/filter/ts/state';
+import { ModulesInterface } from '../redux/modules/ts/state';
+import { setModule } from '../redux/modules/actionCreators';
 
 export const Home: React.FC = () => {
    const dispatch = useDispatch();
@@ -20,9 +20,8 @@ export const Home: React.FC = () => {
             {modules &&
                modules.map((content: ModulesInterface) => (
                   <Link onClick={() => dispatch(setModule(content))} to={`/learn/${content.id}`} key={content.id}>
-                     <div className="card" style={{ flexDirection: 'column' }}>
-                        <span>11 terms</span>
-                        <h3>Module {content.name}</h3>
+                     <div className="card">
+                        <h3>Module «{content.name}»</h3>
                      </div>
                   </Link>
                ))}
