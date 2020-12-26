@@ -10,6 +10,12 @@ const initialState = {
 
 export const questionsReducer = (state = initialState, action: CardsActions) => {
    switch (action.type) {
+      case CardsType.SET_LOADING_STATE:
+         return {
+            ...state,
+            loadingState: action.payload,
+         };
+
       case CardsType.FETCH_CARDS:
          return {
             ...state,
@@ -21,6 +27,12 @@ export const questionsReducer = (state = initialState, action: CardsActions) => 
             ...state,
             items: action.payload,
             loadingState: LoadingState.LOADED,
+         };
+
+      case CardsType.CARDS_STATE_CRUD:
+         return {
+            ...state,
+            addCardState: action.payload,
          };
 
       case CardsType.FETCH_ADD_CARD:

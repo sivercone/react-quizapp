@@ -1,16 +1,50 @@
-.learn-learning {
-   background: url(./svg/learning.svg);
-}
-
-.container-learn {
-   height: 800px;
-}
-
 .learn {
-   width: 100%;
-   height: 460px;
-   background-color: #000;
-   transition: background-color 0.2s linear, color 0.2s linear;
+   background: url(./svg/learning.svg);
+
+   .wrapper {
+      height: calc(100vh - 50px);
+   }
+
+   &__block {
+      width: 100%;
+      height: 460px;
+      background-color: #000;
+      transition: background-color 0.2s linear, color 0.2s linear;
+
+      .lineWidth {
+         margin-top: 10px;
+      }
+
+      .correctAnswerIs {
+         margin-top: 10px;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         font-size: 18px;
+         color: #b30027;
+      }
+
+      .sendForm {
+         display: inline-flex;
+         height: 100%;
+
+         input {
+            border-bottom: 1px solid #ffffff;
+            margin-right: 20px;
+            &:focus {
+               border-bottom: 3px solid #ffffff;
+            }
+         }
+
+         button {
+            background-color: #ffffff;
+            color: #000000;
+            &:hover,
+            &:focus {
+               color: #4100f5;
+            }
+         }
+      }
+   }
 
    &__progressbar {
       display: flex;
@@ -23,21 +57,21 @@
       }
    }
 
-   &__content {
+   &__columns {
       display: flex;
       flex-direction: column;
       height: 100%;
       padding: 35px 50px;
+   }
 
-      div {
-         display: inline-flex;
-         flex-direction: column;
-         height: 100%;
-         margin-top: 50px;
-         span {
-            font-size: 50px;
-            font-weight: 400;
-         }
+   &__content {
+      display: inline-flex;
+      flex-direction: column;
+      height: 100%;
+      margin-top: 50px;
+      span {
+         font-size: 50px;
+         font-weight: 400;
       }
    }
 
@@ -48,40 +82,6 @@
          font-size: 80px;
          font-weight: 800;
          color: #f54e00;
-      }
-   }
-
-   .line-width {
-      margin-top: 10px;
-   }
-
-   .correctAnswerIs {
-      margin-top: 10px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 18px;
-      color: #b30027;
-   }
-
-   .send-form {
-      display: inline-flex;
-      height: 100%;
-
-      input {
-         border-bottom: 1px solid #ffffff;
-         margin-right: 20px;
-         &:focus {
-            border-bottom: 3px solid #ffffff;
-         }
-      }
-
-      button {
-         background-color: #ffffff;
-         color: #000000;
-         &:hover,
-         &:focus {
-            color: #4100f5;
-         }
       }
    }
 }
@@ -111,5 +111,45 @@
    input {
       border-bottom: 5px solid #000 !important;
       color: #000;
+   }
+}
+
+@media (max-width: 768px) {
+   .learn {
+      .container {
+         padding: 0;
+      }
+
+      &__progressbar {
+         background-color: #222;
+      }
+
+      &__columns {
+         padding: 25px;
+      }
+      &__block {
+         height: 100%;
+         overflow: hidden;
+
+         .sendForm {
+            flex-wrap: wrap;
+            height: auto;
+
+            input {
+               margin-bottom: 30px;
+               margin-right: 0;
+            }
+
+            button {
+               width: 100%;
+            }
+         }
+      }
+      &__content {
+         span {
+            word-break: break-word;
+            font-size: 36px;
+         }
+      }
    }
 }

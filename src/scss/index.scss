@@ -1,6 +1,6 @@
 @import './card.scss';
 @import './learn.scss';
-@import './home.scss';
+@import './preloader.scss';
 
 body {
    margin: 0;
@@ -10,6 +10,22 @@ body {
    background-color: #131313;
    color: #fff;
    font-size: 25px;
+}
+
+::-webkit-scrollbar {
+   width: 15px;
+}
+
+::-webkit-scrollbar-track {
+   background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: #ffffff4d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background-color: #ffffff71;
 }
 
 *,
@@ -25,8 +41,18 @@ a {
    text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0;
+}
+
 ::placeholder {
    color: #0000006b;
+   user-select: none;
 }
 
 button,
@@ -40,9 +66,10 @@ input {
 button {
    border-radius: 5px;
    cursor: pointer;
+   user-select: none;
 }
 
-.send-form {
+.sendForm {
    align-items: center;
 
    input {
@@ -63,21 +90,35 @@ button {
    }
 }
 
-// добавить свой кастомный скролл
-
 .header {
-   padding: 0 50px;
-   margin-bottom: 50px;
+   padding: 0 2.5%;
    height: 50px;
    display: flex;
    justify-content: space-between;
    align-items: center;
    background-color: #000000;
+
+   &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+         font-weight: 700;
+         font-size: 32px;
+      }
+
+      svg {
+         font-size: 40px;
+      }
+   }
 }
 
 .container {
-   width: 970px;
-   margin: 0 auto;
+   max-width: 970px;
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
    padding: 0 20px;
 }
 
@@ -87,14 +128,79 @@ button {
    align-items: center;
 }
 
-.line-height {
+.lineHeight {
    width: 5px;
    background-color: #000;
 }
 
-.line-width {
+.lineWidth {
    height: 3px;
    background-color: #000;
+}
+
+.card {
+   display: inline-flex;
+   width: 100%;
+   border-radius: 2px;
+   padding: 20px;
+   background-color: #1ed760;
+   color: #000;
+
+   span {
+      word-break: break-word;
+   }
+
+   &__hover {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 150px;
+      background-color: #1a1a1a;
+      box-shadow: 4px 6px #1d1d1d;
+      transform: translateX(-80%);
+
+      button {
+         display: flex;
+         align-items: center;
+         width: 100%;
+         color: #7c0000;
+
+         svg {
+            margin-right: 10px;
+         }
+      }
+   }
+
+   h3 {
+      padding: 20px 0;
+   }
+}
+
+.modals {
+   background: url(./svg/waves.svg);
+   background-position: bottom;
+   background-size: auto;
+
+   &__columns {
+      flex-direction: column;
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+      .card {
+         width: 100%;
+         margin: 10px auto;
+         background-color: #181818;
+         color: #1ed760;
+         &:hover {
+            background-color: #1ed760;
+            color: #000;
+         }
+         h3 {
+            word-break: break-all;
+         }
+      }
+   }
 }
 
 @media (max-width: 768px) {
@@ -103,89 +209,10 @@ button {
       padding: 0 10px;
    }
 }
-
-// preloader
-.lds-roller {
-   display: inline-block;
-   position: relative;
-   width: 80px;
-   height: 80px;
-}
-.lds-roller div {
-   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-   transform-origin: 40px 40px;
-}
-.lds-roller div:after {
-   content: ' ';
-   display: block;
-   position: absolute;
-   width: 7px;
-   height: 7px;
-   border-radius: 50%;
-   background: #7dc4c9;
-   margin: -4px 0 0 -4px;
-}
-.lds-roller div:nth-child(1) {
-   animation-delay: -0.036s;
-}
-.lds-roller div:nth-child(1):after {
-   top: 63px;
-   left: 63px;
-}
-.lds-roller div:nth-child(2) {
-   animation-delay: -0.072s;
-}
-.lds-roller div:nth-child(2):after {
-   top: 68px;
-   left: 56px;
-}
-.lds-roller div:nth-child(3) {
-   animation-delay: -0.108s;
-}
-.lds-roller div:nth-child(3):after {
-   top: 71px;
-   left: 48px;
-}
-.lds-roller div:nth-child(4) {
-   animation-delay: -0.144s;
-}
-.lds-roller div:nth-child(4):after {
-   top: 72px;
-   left: 40px;
-}
-.lds-roller div:nth-child(5) {
-   animation-delay: -0.18s;
-}
-.lds-roller div:nth-child(5):after {
-   top: 71px;
-   left: 32px;
-}
-.lds-roller div:nth-child(6) {
-   animation-delay: -0.216s;
-}
-.lds-roller div:nth-child(6):after {
-   top: 68px;
-   left: 24px;
-}
-.lds-roller div:nth-child(7) {
-   animation-delay: -0.252s;
-}
-.lds-roller div:nth-child(7):after {
-   top: 63px;
-   left: 17px;
-}
-.lds-roller div:nth-child(8) {
-   animation-delay: -0.288s;
-}
-.lds-roller div:nth-child(8):after {
-   top: 56px;
-   left: 12px;
-}
-@keyframes lds-roller {
-   0% {
-      transform: rotate(0deg);
-   }
-   100% {
-      transform: rotate(360deg);
+@media (max-width: 300px) {
+   .header__logo {
+      span {
+         display: none;
+      }
    }
 }

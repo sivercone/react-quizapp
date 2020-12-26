@@ -12,6 +12,20 @@ export const CardModule: React.FC<Props> = ({ content }) => {
 
    const [hover, setHover] = React.useState<boolean>(false);
 
+   const linkToThreeDot = React.useRef<HTMLDivElement>(null);
+   const toggleEditPanel = () => {
+      setHover(!hover);
+   };
+   const nonRefClick = (event: any) => {
+      const path = event.path || (event.composedPath && event.composedPath());
+      if (!path.includes(linkToThreeDot.current)) {
+         setHover(false);
+      }
+   };
+   React.useEffect(() => {
+      document.body.addEventListener('click', nonRefClick);
+   }, []);
+
    const onRemove = () => {
       dispatch(removeModule(content.id, content));
    };
@@ -19,7 +33,7 @@ export const CardModule: React.FC<Props> = ({ content }) => {
    return (
       <>
          <span style={{ width: '100%' }}>{content.name}</span>
-         <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+         <div onClick={toggleEditPanel} ref={linkToThreeDot} className="threeDot">
             {hover && (
                <div className="card__hover">
                   <button onClick={onRemove}>

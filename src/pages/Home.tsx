@@ -15,17 +15,19 @@ export const Home: React.FC = () => {
    }, []);
 
    return (
-      <section className="modals-waves">
-         <div className="modals container wrapper">
+      <div className="modals">
+         <div className="modals__columns container wrapper">
             {modules &&
                modules.map((content: ModulesInterface) => (
-                  <Link onClick={() => dispatch(setModule(content))} to={`/learn/${content.id}`} key={content.id}>
-                     <div className="card">
-                        <h3>Module «{content.name}»</h3>
-                     </div>
+                  <Link
+                     className="card"
+                     onClick={() => dispatch(setModule(content))}
+                     to={`/learn/${content.id}`}
+                     key={content.id}>
+                     <h3>Module «{content.name}»</h3>
                   </Link>
                ))}
          </div>
-      </section>
+      </div>
    );
 };

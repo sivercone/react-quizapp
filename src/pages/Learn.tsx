@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { RootState } from '../redux/store';
 import { fetchCards } from '../redux/cards/actionCreators';
 import { TermsInterface } from '../redux/cards/ts/state';
+import { Loader } from '../components/Loader';
 
 export const Learn: React.FC = () => {
    const params: { id: string } = useParams();
@@ -96,8 +97,8 @@ export const Learn: React.FC = () => {
    };
 
    return (
-      <section className="learn-learning">
-         <div className="container-learn container wrapper">
+      <div className="learn">
+         <div className="container wrapper">
             {value === 'end' ? (
                <div className="learn__end">
                   {incorrect.length > 0 ? (
@@ -113,40 +114,34 @@ export const Learn: React.FC = () => {
                   )}
                </div>
             ) : term.length > 0 ? (
-               <div className={value === 'correct' ? 'learn correct' : value === 'wrong' ? 'learn wrong' : 'learn'}>
+               <div
+                  className={
+                     value === 'correct' ? 'learn__block correct' : value === 'wrong' ? 'learn__block wrong' : 'learn__block'
+                  }>
                   <div className="learn__progressbar">
                      <div className="learn__progressbar__line" style={progressbarStyle}></div>
                   </div>
-                  <div className="learn__content">
-                     <div>
+                  <div className="learn__columns">
+                     <div className="learn__content">
                         <span>{incorrect[indexArr] ? incorrect[indexArr].answer : term[indexArr].answer}</span>
                         {value === 'wrong' ? (
                            <>
-                              <span className="line-width"></span>
+                              <span className="lineWidth"></span>
                               <span className="correctAnswerIs">correct answer</span>
                               <span>{term[indexArr].question}</span>
                            </>
                         ) : undefined}
                      </div>
-                     <form onSubmit={checkAnswer} className="send-form">
+                     <form onSubmit={checkAnswer} className="sendForm">
                         <input onChange={handleChangeText} value={text} />
                         <button onClick={checkAnswer}>{value === 'correct' ? 'Correct' : 'Answer'}</button>
                      </form>
                   </div>
                </div>
             ) : (
-               <div className="lds-roller">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-               </div>
+               <Loader />
             )}
          </div>
-      </section>
+      </div>
    );
 };

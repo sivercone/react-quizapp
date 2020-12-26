@@ -1,171 +1,183 @@
-.cards-squares {
+.cards {
    background: url(./svg/squares.svg);
-}
 
-.terms-length {
-   text-align: center;
-   color: #ffffff;
-}
+   &__termsLength {
+      text-align: center;
+      color: #ffffff;
+      margin: 20px 0;
+   }
 
-.card {
-   display: inline-flex;
-   width: 100%;
-   border-radius: 2px;
-   padding: 20px;
-   background-color: #1ed760;
-   color: #000;
-
-   &__hover {
-      position: absolute;
+   &__wrapper {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 150px;
-      background-color: #1e3ad7;
-      box-shadow: 4px 6px rgb(56, 0, 0);
+      flex-direction: column-reverse;
+      width: 100%;
+      margin-bottom: 5%;
 
-      button {
-         display: flex;
-         align-items: center;
-         width: 100%;
+      .card {
+         margin-bottom: 20px;
 
-         svg {
-            margin-right: 10px;
-         }
-      }
-   }
-}
-
-.create {
-   .createModule {
-      background-color: #7543ff;
-
-      button {
-         &:disabled,
-         &[disabled] {
-            background-color: #6b38f7 !important;
-         }
-      }
-   }
-
-   .popup {
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-
-      svg {
-         transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-
-         &.rotate {
-            transform: rotate(180deg);
-         }
-      }
-
-      h4 {
-         margin: 0;
-      }
-
-      &__visible {
-         position: relative;
-         width: 100%;
-         cursor: pointer;
-
-         ul {
-            max-height: 220px;
-            overflow: auto;
-            position: absolute;
-            margin: 0;
-            padding: 0;
+         span {
             width: 100%;
-            background-color: #181818;
-            color: #fff;
-            font-weight: 700;
+            &:first-child {
+               width: 60%;
+            }
+         }
 
-            li {
-               padding: 10px 20px;
-               &:hover {
-                  background-color: #131313;
-                  color: #8e65ff;
+         .lineHeight {
+            margin: 0 50px;
+         }
+
+         .threeDot {
+            cursor: pointer;
+         }
+      }
+   }
+
+   &__create {
+      margin-top: 50px;
+
+      .modulePopup {
+         cursor: pointer;
+         user-select: none;
+
+         .card {
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+               font-size: 25px;
+               font-weight: 700;
+            }
+
+            svg {
+               transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+               &.rotate {
+                  transform: rotate(180deg);
+               }
+            }
+         }
+
+         &__list {
+            position: relative;
+            width: 100%;
+            cursor: pointer;
+
+            .active {
+               color: #7d4eff;
+            }
+
+            ul {
+               position: absolute;
+               max-height: 220px;
+               overflow: auto;
+               margin: 0;
+               padding: 0;
+               width: 100%;
+               background-color: #181818;
+               color: #fff;
+               font-weight: 700;
+               border-radius: 0 0 2px 2px;
+
+               li {
+                  padding: 10px 20px;
+                  user-select: none;
+
+                  &:hover {
+                     background-color: #131313;
+                     color: #8e65ff;
+                  }
                }
             }
          }
       }
    }
 
-   .send-form {
+   &__addContent {
       margin-top: 20px;
-      input {
-         border-bottom: 2px solid #000;
+      display: flex;
+      flex-direction: row;
+
+      .sendForm {
+         flex-basis: 90%;
          margin-right: 20px;
-         &:focus {
-            border-bottom: 3px solid #000;
+
+         input {
+            color: #000;
+            border-bottom: 2px solid #000;
+            margin-right: 20px;
+            &:focus {
+               border-bottom: 3px solid #000;
+            }
+         }
+
+         button {
+            background-color: #000000;
+            color: #ffffff;
+            &:hover,
+            &:focus {
+               color: #8e65ff;
+            }
+
+            &:disabled,
+            &[disabled] {
+               background-color: #21bd58;
+               color: #2e2e2e;
+               cursor: default;
+            }
          }
       }
 
-      button {
-         background-color: #000000;
-         color: #ffffff;
-         &:hover,
-         &:focus {
-            color: #8e65ff;
-         }
+      .toggleModule {
+         flex-basis: 10%;
+         min-width: 90px;
+         width: 100%;
+         border-radius: 2px;
+         background-color: #1ed760;
+         transition: background-color 0.1s linear;
 
-         &:disabled,
-         &[disabled] {
-            background-color: #21bd58;
-            color: #2e2e2e;
-            cursor: default;
+         button {
+            width: 100%;
+            height: 100%;
+            font-size: 30px;
+            color: #000;
          }
       }
    }
 }
 
-.modulePanel {
-   display: inline-flex;
-   width: 100%;
+@media (max-width: 600px) {
+   .cards__wrapper {
+      .card {
+         .lineHeight {
+            margin: 0 25px;
+         }
 
-   &__left {
-      width: 90%;
-      margin-right: 20px;
-   }
-
-   &__right {
-      width: 10%;
-      border-radius: 2px;
-      background-color: #1ed760;
-      transition: background-color 0.1s linear;
-
-      &:hover {
-         background-color: #7543ff;
-      }
-
-      button {
-         width: 100%;
-         height: 100%;
-         font-size: 30px;
-         color: #000;
-      }
-   }
-}
-
-.cards-wrapper {
-   display: flex;
-   flex-direction: column-reverse;
-   width: 100%;
-   margin-bottom: 5%;
-
-   .card {
-      margin-top: 20px;
-
-      span {
-         width: 100%;
-         &:first-child {
-            width: 60%;
+         .threeDot svg {
+            display: none;
          }
       }
-
-      .line-height {
-         margin: 0 50px;
+   }
+   .cards__addContent {
+      flex-wrap: wrap-reverse;
+      .sendForm {
+         flex-wrap: wrap;
+         margin-right: 0;
+         margin-top: 20px;
+         flex-basis: 100%;
+         input {
+            margin-right: 0;
+            margin-bottom: 20px;
+         }
+         button {
+            width: 100%;
+         }
+      }
+      .toggleModule {
+         flex-basis: 100%;
+         button {
+            font-size: 40px;
+         }
       }
    }
 }

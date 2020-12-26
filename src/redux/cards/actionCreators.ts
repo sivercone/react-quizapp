@@ -1,6 +1,11 @@
 // prettier-ignore
-import {CardsType,fetchCardsInterface,setCardsInterface,fetchAddCardInterface,addCardInterface, removeCardSuccessInterface, removeCardInterface,} from './ts/actionTypes';
-import { TermsInterface } from './ts/state';
+import {CardsType,fetchCardsInterface,setCardsInterface,fetchAddCardInterface,addCardInterface, removeCardSuccessInterface, removeCardInterface, setLoadingStateInterface, cardsStateCRUDInterface,} from './ts/actionTypes';
+import { TermsInterface, LoadingState, AddCardState } from './ts/state';
+
+export const setLoadingState = (payload: LoadingState): setLoadingStateInterface => ({
+   type: CardsType.SET_LOADING_STATE,
+   payload,
+});
 
 export const fetchCards = (payload: string): fetchCardsInterface => ({
    type: CardsType.FETCH_CARDS,
@@ -9,6 +14,11 @@ export const fetchCards = (payload: string): fetchCardsInterface => ({
 
 export const setCards = (payload: TermsInterface): setCardsInterface => ({
    type: CardsType.SET_CARDS,
+   payload,
+});
+
+export const cardsStateCRUD = (payload: AddCardState): cardsStateCRUDInterface => ({
+   type: CardsType.CARDS_STATE_CRUD,
    payload,
 });
 
@@ -42,4 +52,6 @@ export type CardsActions =
    | setCardsInterface
    | fetchAddCardInterface
    | addCardInterface
-   | removeCardSuccessInterface;
+   | removeCardSuccessInterface
+   | setLoadingStateInterface
+   | cardsStateCRUDInterface;

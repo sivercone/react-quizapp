@@ -87,38 +87,60 @@ export const Create: React.FC = () => {
    };
 
    return (
-      <section className="cards-squares">
+      <div className="cards">
          <div className="container">
-            <div className="create">
-               <section className="modulePanel">
-                  <div className="modulePanel__left" ref={linkToPopup}>
-                     <div onClick={toggleVisiblePopup} className="card popup">
-                        <h4>{currentModule.id === '0' ? 'Select Module' : currentModule.name}</h4>
-                        <svg
-                           className={visiblePopup ? 'rotate' : undefined}
-                           xmlns="http://www.w3.org/2000/svg"
-                           height="24"
-                           viewBox="0 0 24 24"
-                           width="24"
-                           fill="currentColor">
-                           <path d="M0 0h24v24H0z" fill="none"></path>
-                           <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
-                        </svg>
+            <div className="cards__create">
+               <div className="modulePopup" ref={linkToPopup}>
+                  <button onClick={toggleVisiblePopup} className="card">
+                     <span>{currentModule.id === '0' ? 'Select Module' : currentModule.name}</span>
+                     <svg
+                        className={visiblePopup ? 'rotate' : undefined}
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        fill="currentColor">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                     </svg>
+                  </button>
+                  {visiblePopup && (
+                     <div className="modulePopup__list">
+                        <ul>
+                           {modules &&
+                              modules.map((content: ModulesInterface) => (
+                                 <li
+                                    onClick={() => setCurrentModule(content)}
+                                    key={content.id}
+                                    className={currentModule.id === content.id ? 'active' : undefined}>
+                                    {content.name}
+                                 </li>
+                              ))}
+                        </ul>
                      </div>
-                     {visiblePopup && (
-                        <div className="popup__visible">
-                           <ul>
-                              {modules &&
-                                 modules.map((content: ModulesInterface) => (
-                                    <li onClick={() => setCurrentModule(content)} key={content.id}>
-                                       {content.name}
-                                    </li>
-                                 ))}
-                           </ul>
-                        </div>
-                     )}
-                  </div>
-                  <div onClick={toggleVisibleModulesEdit} className="modulePanel__right">
+                  )}
+               </div>
+
+               <div className="cards__addContent">
+                  {visibleModulesEdit ? (
+                     <form onSubmit={createModule} className="sendForm card">
+                        <input onChange={handleChangeTextModule} value={textModule} placeholder="Module" />
+                        <button disabled={!textModule.trim()} onClick={createModule}>
+                           Create
+                        </button>
+                     </form>
+                  ) : (
+                     <form onSubmit={createTerm} className="sendForm card">
+                        <input onChange={handleChangeTextQuestion} value={textQuestion} placeholder="Question" />
+                        <input onChange={handleChangeTextAnswer} value={textAnswer} placeholder="Answer" />
+                        <button
+                           disabled={currentModule.id === '0' || !textQuestion.trim() || !textAnswer.trim()}
+                           onClick={createTerm}>
+                           Create
+                        </button>
+                     </form>
+                  )}
+                  <div onClick={toggleVisibleModulesEdit} className="toggleModule">
                      <button>
                         {visibleModulesEdit ? (
                            <svg
@@ -155,28 +177,10 @@ export const Create: React.FC = () => {
                         )}
                      </button>
                   </div>
-               </section>
-               {visibleModulesEdit ? (
-                  <form onSubmit={createModule} className="send-form card createModule">
-                     <input onChange={handleChangeTextModule} value={textModule} placeholder="Module" />
-                     <button disabled={!textModule.trim()} onClick={createModule}>
-                        Create
-                     </button>
-                  </form>
-               ) : (
-                  <form onSubmit={createTerm} className="send-form card">
-                     <input onChange={handleChangeTextQuestion} value={textQuestion} placeholder="Question" />
-                     <input onChange={handleChangeTextAnswer} value={textAnswer} placeholder="Answer" />
-                     <button
-                        disabled={currentModule.id === '0' || !textQuestion.trim() || !textAnswer.trim()}
-                        onClick={createTerm}>
-                        Create
-                     </button>
-                  </form>
-               )}
+               </div>
             </div>
             <Created visibleModulesEdit={visibleModulesEdit} modules={modules} />
          </div>
-      </section>
+      </div>
    );
 };

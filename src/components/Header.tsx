@@ -5,7 +5,7 @@ export const Header = () => {
    return (
       <header className="header">
          <Link to="/">
-            <h2>
+            <div className="header__logo">
                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path
                      fillRule="evenodd"
@@ -16,8 +16,8 @@ export const Header = () => {
                      d="M14.469 9.414a.75.75 0 0 1 .117 1.055l-4 5a.75.75 0 0 1-1.116.061l-2.5-2.5a.75.75 0 1 1 1.06-1.06l1.908 1.907 3.476-4.346a.75.75 0 0 1 1.055-.117z"
                   />
                </svg>
-               Learning
-            </h2>
+               <span>Learning</span>
+            </div>
          </Link>
          <Link to="/create">
             <span>
